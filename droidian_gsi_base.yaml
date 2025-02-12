@@ -5,9 +5,9 @@
 {{- $droidian_version := or .droidian_version "current" -}}
 {{- $droidian_variant := or .droidian_variant "" -}}
 
-{{- $username := or .username "droidian" -}}
-{{- $password := or .password "1234" -}}
-{{- $hostname := or .hostname "droidian" -}}
+{{- $username := or .username "DLS-OS" -}}
+{{- $password := or .password "0000" -}}
+{{- $hostname := or .hostname "P3aXL" -}}
 
 architecture: {{ $architecture }}
 actions:
