@@ -23,4 +23,4 @@ echo "$USERNAME:$PASSWORD" | chpasswd
 # Make sure to create user directories
 DEBIAN_FRONTEND=noninteractive apt-get install xdg-user-dirs
 
-sudo -u dls_os xdg-user-dirs-update
+sudo -u shields xdg-user-dirs-update
