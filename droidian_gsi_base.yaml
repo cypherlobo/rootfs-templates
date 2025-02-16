@@ -6,7 +6,7 @@
 {{- $droidian_variant := or .droidian_variant "" -}}
 
 {{- $username := or .username "droidian" -}}
-{{- $password := or .password "1234" -}}
+{{- $password := or .password "0000" -}}
 {{- $hostname := or .hostname "droidian" -}}
 
 architecture: {{ $architecture }}
