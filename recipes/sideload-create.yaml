@@ -69,5 +69,4 @@ actions:
     chroot: true
     script: |
       echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" > /etc/apt/sources.list.d/kali.list
-      wget -qO - https://archive.kali.org/archive-key.asc | tee /etc/apt/trusted.gpg.d/kali-archive-keyring.asc
       apt update
