@@ -9,6 +9,7 @@
 {{- $use_internal_repository := or .use_internal_repository "no" -}}
 {{- $droidian_version := or .droidian_version "current" -}}
 
+
 architecture: {{ $architecture }}
 actions:
 
@@ -22,6 +23,7 @@ actions:
       version: {{ $version }}
       use_internal_repository: {{ $use_internal_repository }}
       droidian_version: {{ $droidian_version }}
+      droidian_variant: {{ $droidian_variant }}
 
   - action: recipe
     description: Install device-specific packages
@@ -53,6 +55,11 @@ actions:
     description: Generate flashable image
     script: scripts/genimage.sh {{ $image }}
 {{end}}
+
+  - action: run
+    chroot: false
+    description: Show build output
+    command: ls -lha
 
   - action: run
     chroot: false
