@@ -23,4 +23,4 @@ echo "$USERNAME:$PASSWORD" | chpasswd
 # Make sure to create user directories
 DEBIAN_FRONTEND=noninteractive apt-get install xdg-user-dirs
 
-sudo -u droidian xdg-user-dirs-update
+sudo -u dls xdg-user-dirs-update
