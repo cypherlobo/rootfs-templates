@@ -1,6 +1,6 @@
 {{- $architecture := or .architecture "arm64" -}}
 {{- $suffix := or .suffix "testbuild" -}}
-{{- $image := or .image (printf "dls_os-rootfs-api29gsi-%s%s.zip" $architecture $suffix) -}}
+{{- $image := or .image (printf "dls-rootfs-api29gsi-%s%s.zip" $architecture $suffix) -}}
 {{- $output_type :=  or .output_type "rootfs" -}}
 {{- $apilevel := or .apilevel 28 -}}
 {{- $version := or .version "nightly" -}}
@@ -8,7 +8,7 @@
 {{- $variant := or .variant "phone" -}}
 {{- $use_internal_repository := or .use_internal_repository "no" -}}
 {{- $droidian_version := or .droidian_version "current" -}}
-
+{{- $droidian_variant := or .droidian_variant "" -}}
 
 architecture: {{ $architecture }}
 actions:
@@ -55,11 +55,6 @@ actions:
     description: Generate flashable image
     script: scripts/genimage.sh {{ $image }}
 {{end}}
-
-  - action: run
-    chroot: false
-    description: Show build output
-    command: ls -lha
 
   - action: run
     chroot: false
